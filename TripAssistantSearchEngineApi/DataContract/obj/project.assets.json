@@ -702,23 +702,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pgoel\\.nuget\\packages\\": {},
+    "C:\\Users\\mmehndiratta\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj",
+      "projectUniqueName": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj",
       "projectName": "DataContract",
-      "projectPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj",
-      "packagesPath": "C:\\Users\\pgoel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\obj\\",
+      "projectPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj",
+      "packagesPath": "C:\\Users\\mmehndiratta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pgoel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mmehndiratta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -745,12 +748,12 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0",
             "autoReferenced": true
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[11.0.2, )"
+            "version": "11.0.2"
           }
         },
         "imports": [

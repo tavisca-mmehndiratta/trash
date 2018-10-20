@@ -24,7 +24,7 @@ namespace TripAssistantSearchEngineApi
         {
             List<Core.Contracts.Activity> translatedActivityResult;
             List<JObject> activities = null; ;
-            activities = _activityCache.GetActivitiesFromCache(city);
+            //activities = _activityCache.GetActivitiesFromCache(city);
             if (activities != null)
             {
                 _activityCache.Remove(city);
@@ -33,7 +33,7 @@ namespace TripAssistantSearchEngineApi
             else
             {
                 Task<List<JObject>> combinedResultsFromApi = FetchDataFromAllAPIs(location);
-                _activityCache.InsertActivitiesInCache(combinedResultsFromApi.Result,city);
+                //_activityCache.InsertActivitiesInCache(combinedResultsFromApi.Result,city);
                 translatedActivityResult = _activityTranslator.GetFilteredActivity(combinedResultsFromApi.Result);
             }
             return translatedActivityResult;
@@ -43,7 +43,7 @@ namespace TripAssistantSearchEngineApi
         {
             try
             {
-                string url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=" + placeId + "&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                string url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=" + placeId + "&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                 using (WebClient client = new WebClient())
                 {
                     string jsonPrediction = await client.DownloadStringTaskAsync(url);
@@ -80,119 +80,212 @@ namespace TripAssistantSearchEngineApi
                         (new ParallelOptions() { MaxDegreeOfParallelism = 1 },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=activity&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=activity&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=attractions&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=attractions&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=amusement%20parks&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=amusement%20parks&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=aquarium&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=aquarium&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=art%20gallery&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=art%20gallery&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=church&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=church&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=hindu%20temple&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=hindu%20temple&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=mosque&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=mosque&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=museum&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=museum&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=park&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=park&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=shopping%20mall&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=shopping%20mall&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=zoo&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=zoo&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             },
                             () =>
                             {
-                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=natural%20feature&key=AIzaSyCelUrgs9LtCwbQf5LTZ8yYIt_NhquG4Y8";
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=natural%20feature&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                                 using (WebClient wc = new WebClient())
                                 {
                                     wc.DownloadStringTaskAsync(new Uri(url));
-                                    wc.DownloadStringCompleted += (sender, e) => searlizedResponse.Add(JsonConvert.DeserializeObject<JObject>(e.Result));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
+                                }
+                            },
+                            () =>
+                            {
+                                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + location + "&radius=300000&keyword=adventures&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
+                                using (WebClient wc = new WebClient())
+                                {
+                                    wc.DownloadStringTaskAsync(new Uri(url));
+                                    wc.DownloadStringCompleted += (sender, e) => {
+                                        JObject result = JsonConvert.DeserializeObject<JObject>(e.Result);
+                                        if (result != null)
+                                        {
+                                            searlizedResponse.Add(result);
+                                        }
+                                    };
                                 }
                             }
                         );

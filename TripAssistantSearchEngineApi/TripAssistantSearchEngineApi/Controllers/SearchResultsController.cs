@@ -33,7 +33,7 @@ namespace TripAssistantSearchEngineApi
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
-                return BadRequest("Request again!!!");
+                return BadRequest("Exception Occured!!!");
             }
         }
 

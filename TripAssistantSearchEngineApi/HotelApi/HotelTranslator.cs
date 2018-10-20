@@ -36,7 +36,7 @@ namespace TripAssistantSearchEngineApi
                 {
                     photoArray = res["photos"].Value<JArray>();
                     JObject photo = photoArray[0].Value<JObject>();
-                    hotel.PhotoUrl = url + photo["photo_reference"].Value<String>() + "&key=AIzaSyD2bL_pYSzue4JkSDQg4fYSuVT8XA_bjCQ";
+                    hotel.PhotoUrl = url + photo["photo_reference"].Value<String>() + "&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
                 }
             }
             catch(Exception e)

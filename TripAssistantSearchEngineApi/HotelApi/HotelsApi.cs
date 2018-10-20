@@ -13,7 +13,7 @@ namespace TripAssistantSearchEngineApi
         private readonly IHotelTranslator _hotelTranslator;
         private readonly IHotelCache _hotelCache;
         private readonly string _startFieldOfUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=";
-        private readonly string _endFieldOfUrl = "&radius=100000&type=hotels&keyword=hotels&key=AIzaSyD2bL_pYSzue4JkSDQg4fYSuVT8XA_bjCQ";
+        private readonly string _endFieldOfUrl = "&radius=100000&type=hotels&keyword=hotels&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
         public HotelsApi(IHotelTranslator hotelTranslator, IHotelCache hotelCache)
         {
             _hotelCache = hotelCache;

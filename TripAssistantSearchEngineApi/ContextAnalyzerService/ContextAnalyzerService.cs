@@ -68,7 +68,8 @@ namespace TripAssistantSearchEngineApi
                 activityResponse = null;
                 resultantResponse = "This Request is beyond my power!!!";
             }
-            Response finalResults = _coreResponseGenerator.MakeResponse(input,hotelResponse.Result, activityResponse, typeResponse, resultantResponse);
+            Response finalResults = new Response();
+            finalResults= _coreResponseGenerator.MakeResponse(input,hotelResponse, activityResponse, typeResponse, resultantResponse);
             return finalResults;
         }
         public string PerformOperationAgainstCorrectInput(string location)

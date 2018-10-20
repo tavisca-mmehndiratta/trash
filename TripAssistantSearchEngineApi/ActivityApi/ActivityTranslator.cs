@@ -8,26 +8,60 @@ namespace TripAssistantSearchEngineApi
     public class ActivityTranslator : IActivityTranslator
     {
         readonly string url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=";
+        private static List<string> _staticPlaceType = new List<string>(new string[]{
+            "amusement_park",
+            "aquarium",
+            "art_gallery",
+            "church",
+            "hindu_temple",
+            "mosque",
+            "museum",
+            "park",
+            "shopping_mall",
+            "zoo",
+            "natural_feature",
+            "point_of_interest"
+        });
 
         public List<Activity> GetFilteredActivity(List<JObject> activityjObject)
         {
             List<Activity> activityList = new List<Activity>();
-            Activity activity = null;
-            
+            Activity activity = new Activity();
+            List<ActivityList> tempData = new List<ActivityList>();
+            ActivityList activityList1 = new ActivityList();
+            JArray types = new JArray();
+
             foreach (JObject rest in activityjObject)
             {
                 var results = rest["results"].Value<JArray>();
-                foreach(JObject res in results)
+                activityList1 = new ActivityList();
+                activity = new Activity();
+                tempData = new List<ActivityList>();
+                foreach (JObject res in results)
                 {
-                    activity = SingleFilteredResult(res);
+                    types = res["types"].Value<JArray>();
+                    foreach(string type in types)
+                    {
+                        if (_staticPlaceType.Contains(type))
+                        {
+                            activity.Type = type;
+                            break;
+                        }
+                    }
+                    activityList1 = SingleFilteredResult(res);
+                    tempData.Add(activityList1);  
+                }
+                activity.ListActivity = tempData;
+                if (activity.Type != null)
+                {
                     activityList.Add(activity);
-                } 
+                }
             }
             return activityList;
         }
-        public Activity SingleFilteredResult(JObject res)
+        public ActivityList SingleFilteredResult(JObject res)
         {
-            Activity activity = new Activity();
+            ActivityList activity = new ActivityList();
             try {
                 
                 JObject activityDetails;
@@ -49,9 +83,7 @@ namespace TripAssistantSearchEngineApi
                     photo = photoArray[0].Value<JObject>();
                     activity.PhotoUrl = url + photo["photo_reference"].Value<String>() + "&key=AIzaSyD2bL_pYSzue4JkSDQg4fYSuVT8XA_bjCQ";
                 }
-                JArray types = new JArray();
-                types = activityDetails["types"].Value<JArray>();
-                activity.Type = (String)types[0];
+                
                 activity.PlaceId = placeId;
             }
             catch(Exception e)

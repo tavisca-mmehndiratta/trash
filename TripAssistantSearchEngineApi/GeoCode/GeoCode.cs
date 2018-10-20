@@ -11,9 +11,9 @@ namespace TripAssistantSearchEngineApi
         string geoCode = "";
         private readonly IGeoCodeGenerator _geoCodeGenerator;
         private readonly string _startFieldOfCumulativeUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=";
-        private readonly string _endFieldOfCumulativeUrl = "&radius=300000&keyword=point%20of%20interest&key=AIzaSyD2bL_pYSzue4JkSDQg4fYSuVT8XA_bjCQ";
+        private readonly string _endFieldOfCumulativeUrl = "&radius=300000&keyword=point%20of%20interest&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
         private readonly string _startFieldOfSingleUrl = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
-        private readonly string _endFieldOfSingleUrl = "&key=AIzaSyD2bL_pYSzue4JkSDQg4fYSuVT8XA_bjCQ";
+        private readonly string _endFieldOfSingleUrl = "&key=AIzaSyAGsJD6XqB9zheEOUoYFpOCGuPuDlUWhOc";
 
         public GeoCode(IGeoCodeGenerator geoCodeGenerator)
         {

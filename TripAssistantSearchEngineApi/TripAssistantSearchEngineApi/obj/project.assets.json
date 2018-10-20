@@ -7964,11 +7964,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/2.0.3": {
-      "sha512": "5x4iBuePKwa3LFdyPXotF5si2S/aQbg0nTpLAY4OwBm4bYukyZ1MqEvJzk7QBrBQgAU5B2w5WWeWAZu97c2+sQ==",
+      "sha512": "52tNEfLXZtB82T9Tahr6w35HNhneDCpeXvY7sFGP3hBifynZ/dKev+PQvr6VX8jMXUuWlbx/19r03SPvyZwFrA==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration/2.0.3",
       "files": [
-        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.xml",
         "microsoft.visualstudio.web.codegeneration.2.0.3.nupkg.sha512",
@@ -7976,11 +7975,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.0.3": {
-      "sha512": "Drhtw/EHyL7Uw6jdbv1PWN2dpZuW53H5B2bDW7T4DmBmIGKaNMsBALQIJRtU269ZyfaVy9RpU+kKQkm+PCAnog==",
+      "sha512": "RC6h5TLOhRji+Ei1rEQkew254pgl3CDkv7kS9g99WXin/baxFCJvJ60kx0mP0+BImhWy2slhb1lRzzNBOXDAng==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.contracts/2.0.3",
       "files": [
-        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.xml",
         "microsoft.visualstudio.web.codegeneration.contracts.2.0.3.nupkg.sha512",
@@ -7988,11 +7986,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.0.3": {
-      "sha512": "sI26eFsO1788EJuiIlzsZoVKiEOddX3+lna1IxQ9zxwDs5L2jIFzDBWQPEQFvqDDnryOO5EWfDfqUattvb9ocw==",
+      "sha512": "j6M7elWp16R/ck24UbxiRYrDavWFJflseIhjtpPtwXYINtwCJtjVtIHm+PZIzLxg0hwTFFBFm26wopDjGfGq0w==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.core/2.0.3",
       "files": [
-        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.xml",
         "microsoft.visualstudio.web.codegeneration.core.2.0.3.nupkg.sha512",
@@ -8000,11 +7997,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.0.3": {
-      "sha512": "XAD9F7tecb4laosO5BdZ9i4JIqtAp6UBvxpzkEjk63X6i2Vgt0hRptf7jXp/VBcV+2a4Jted/tc2Vhsegon3XA==",
+      "sha512": "YlSBXfB3L3ucHa8BqfzOFOSNTvW308pSNkKBvEswSXRv7bHzl2O33KKmXUSkDqaJvFrU9rYKQY52iTSmAJWlMA==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.design/2.0.3",
       "files": [
-        ".signature.p7s",
         "lib/net461/dotnet-aspnet-codegenerator-design.exe",
         "lib/net461/dotnet-aspnet-codegenerator-design.xml",
         "lib/netcoreapp2.0/dotnet-aspnet-codegenerator-design.dll",
@@ -8022,11 +8018,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.0.3": {
-      "sha512": "z0iVgV2O3ShCoGIY1yvrs91ISssxTPpPPh8LOWx87p1sg64lEwFHyKYV1H9moaQctTmAjZi77Ko1hBQ/mGVWSg==",
+      "sha512": "1ZNc1uqCAv1bU018kJXPOkpv8kKQmncjGwiBndHcJUHQ7xihq5Qd4pFJjWet4i4+mTPX0Bore5fbLa8qA1idyA==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/2.0.3",
       "files": [
-        ".signature.p7s",
         "Templates/DbContext/NewLocalDbContext.cshtml",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.xml",
@@ -8035,11 +8030,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.0.3": {
-      "sha512": "7f1ySFOvc3xXX9hnsDX11EH5kvu3HX5+42FIhZ7odvrmovsiFVWW9yrszcoG80S7pttQRH7PkLfuaSke35eTuw==",
+      "sha512": "anV+hbYvJtSe1aCwqhNo/0b0M7+njZpPG/dx5pdHL6Qds8PoBi9FH+QpF9IxvWmdfgffbPwqpGH3J9Ag8JPGrg==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.templating/2.0.3",
       "files": [
-        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.xml",
         "microsoft.visualstudio.web.codegeneration.templating.2.0.3.nupkg.sha512",
@@ -8047,11 +8041,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.0.3": {
-      "sha512": "dwBpCJ0WKxyVWMzVu/Q7P7dOMetCNYvB+5gMyvsT/69Dx9slYcmJFOSr6vVslfI7ZLZUov+PvJeii8EhDaF7TA==",
+      "sha512": "oaxS4I8mmHIsIN+FsP5XjbGEQHA2DQjzn4uHt8akJY9MlcnbPD71ta5Qez4vF6PuitKljnPFLsPTSJpXESOSXQ==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.utils/2.0.3",
       "files": [
-        ".signature.p7s",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll",
         "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.xml",
         "microsoft.visualstudio.web.codegeneration.utils.2.0.3.nupkg.sha512",
@@ -8059,11 +8052,10 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.0.3": {
-      "sha512": "YJ2YGjs/xqR2uKUMHdrSA0MTkVO/k+q6azfg+syjbx3Zm7wPfcaCh/Ld5+DkgTQjpjfgVL2eKlOTnC1DZspsTA==",
+      "sha512": "WhYNqXJQqJRUt3XaLAUsKJkZcaAWECbSQ+UBqfGFCYDdAtyUS5L361x8lleQFpan4mu6VN/Ispc3CNu24wVu+w==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.0.3",
       "files": [
-        ".signature.p7s",
         "Generators/ParameterDefinitions/area.json",
         "Generators/ParameterDefinitions/controller.json",
         "Generators/ParameterDefinitions/razorpage.json",
@@ -12946,7 +12938,7 @@
       ]
     },
     "System.ValueTuple/4.5.0": {
-      "sha512": "xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
+      "sha512": "fa3P1cPe2SlrjCjJ/yc3mcXkDj4GQORmileNFYBtBZh2qddzwRubagAkj8yz/yF9oLvJVqaZYar9l2SCqNKDJg==",
       "type": "package",
       "path": "system.valuetuple/4.5.0",
       "files": [
@@ -13402,23 +13394,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pgoel\\.nuget\\packages\\": {},
+    "C:\\Users\\mmehndiratta\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi.csproj",
+      "projectUniqueName": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi.csproj",
       "projectName": "TripAssistantSearchEngineApi",
-      "projectPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi.csproj",
-      "packagesPath": "C:\\Users\\pgoel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi\\obj\\",
+      "projectPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi.csproj",
+      "packagesPath": "C:\\Users\\mmehndiratta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripAssistantSearchEngineApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pgoel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mmehndiratta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13431,11 +13426,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj": {
-              "projectPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj"
+            "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj": {
+              "projectPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\DataContract\\DataContract.csproj"
             },
-            "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripResultsService\\TripResultsService.csproj": {
-              "projectPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripResultsService\\TripResultsService.csproj"
+            "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripResultsService\\TripResultsService.csproj": {
+              "projectPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\TripResultsService\\TripResultsService.csproj"
             }
           }
         }
@@ -13451,28 +13446,28 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
-            "version": "[5.0.1, )"
-          },
-          "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "[2.0.9, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "5.0.1"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "[2.0.3, )"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[11.0.2, )"
+            "version": "2.0.3"
           },
           "Serilog": {
             "target": "Package",
-            "version": "[2.7.1, )"
+            "version": "2.7.1"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0",
+            "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.9"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "11.0.2"
           }
         },
         "imports": [

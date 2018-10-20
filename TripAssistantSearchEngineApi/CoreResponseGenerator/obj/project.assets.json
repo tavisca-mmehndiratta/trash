@@ -720,23 +720,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pgoel\\.nuget\\packages\\": {},
+    "C:\\Users\\mmehndiratta\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreResponseGenerator\\CoreResponseGenerator.csproj",
+      "projectUniqueName": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreResponseGenerator\\CoreResponseGenerator.csproj",
       "projectName": "CoreResponseGenerator",
-      "projectPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreResponseGenerator\\CoreResponseGenerator.csproj",
-      "packagesPath": "C:\\Users\\pgoel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreResponseGenerator\\obj\\",
+      "projectPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreResponseGenerator\\CoreResponseGenerator.csproj",
+      "packagesPath": "C:\\Users\\mmehndiratta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreResponseGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pgoel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mmehndiratta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -749,8 +752,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreContract\\CoreContract.csproj": {
-              "projectPath": "C:\\Users\\pgoel\\Downloads\\TripAssistant-API-Mohit\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreContract\\CoreContract.csproj"
+            "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreContract\\CoreContract.csproj": {
+              "projectPath": "C:\\Users\\mmehndiratta\\Downloads\\TripAssistant-API-Mohit (1)\\TripAssistant-API-Mohit\\TripAssistantSearchEngineApi\\CoreContract\\CoreContract.csproj"
             }
           }
         }
@@ -767,7 +770,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

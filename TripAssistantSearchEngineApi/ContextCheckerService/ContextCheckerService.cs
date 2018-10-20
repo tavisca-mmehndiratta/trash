@@ -50,7 +50,7 @@ namespace TripAssistantSearchEngineApi
                 }
                 else
                 {
-                    result = PerformOperationForIncorrectContext(response);
+                    result += PerformOperationForIncorrectContext(response);
                 }
             }
             else
